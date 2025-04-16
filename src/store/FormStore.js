@@ -14,6 +14,8 @@ let AccountReducer = (state = accountDetails, action) => {
       return { ...state, balance: action.payload };
     case "updatePhoneNumber":
       return { ...state, phoneNumber: action.payload };
+    case "RESET":
+      return accountDetails;
     default:
       return { ...state };
   }
